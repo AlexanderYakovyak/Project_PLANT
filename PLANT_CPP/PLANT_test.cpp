@@ -2,10 +2,6 @@
 #include <string>
 #include "PLANT.h"
 
-extern "C" {
-    #include "../PLANT_C/PLANT.h"
-}
-
 
 /* Product test
 input product from console
@@ -13,7 +9,7 @@ write this product to file "products.csv"
 get this product from file "products.csv"
 print information to console
 @param - void
-@result –  void
+@result вЂ“  void
 */
 void product_test(){
     Product p;
@@ -34,7 +30,7 @@ write this equipment to file "equipments.csv"
 get this equipment from file "equipments.csv"
 print information to console
 @param - void
-@result –  void
+@result вЂ“  void
 */
 void equipment_test(){
     Equipment e;
@@ -55,7 +51,7 @@ write this profession to file "professions.csv"
 get this profession from file "professions.csv"
 print information to console
 @param - void
-@result –  void
+@result вЂ“  void
 */
 void profession_test(){
     Profession p;
@@ -76,7 +72,7 @@ write this worker to file "workers.csv"
 get this worker from file "workers.csv"
 print information to console
 @param - void
-@result –  void
+@result вЂ“  void
 */
 void worker_test(){
     Worker w;
@@ -97,7 +93,7 @@ write this director to file "directors.csv"
 get this director from file "directors.csv"
 print information to console
 @param - void
-@result –  void
+@result вЂ“  void
 */
 void director_test(){
     Director d;
@@ -118,7 +114,7 @@ write this sideworker to file "sideworkers.csv"
 get this sideworker from file "sideworkers.csv"
 print information to console
 @param - void
-@result –  void
+@result вЂ“  void
 */
 void sideworker_test(){
     SideWorker s;
@@ -137,7 +133,7 @@ void sideworker_test(){
 calculate salary of each worker in file "workers.csv"
 print information to console
 @param - void
-@result –  void
+@result вЂ“  void
 */
 void workers_salaries(){
     int workers_ids = set_id("../workers.csv");
@@ -153,7 +149,7 @@ void workers_salaries(){
 calculate salary of each sideworker in file "sideworkers.csv"
 print information to console
 @param - void
-@result –  void
+@result вЂ“  void
 */
 void sideworkers_salaries(){
     int sideworkers_ids = set_id("../sideworkers.csv");
@@ -169,7 +165,7 @@ void sideworkers_salaries(){
 calculate salary of each director in file "directors.csv"
 print information to console
 @param - void
-@result –  void
+@result вЂ“  void
 */
 void directors_salaries(){
     int directors_ids = set_id("../directors.csv");
@@ -184,7 +180,7 @@ void directors_salaries(){
 /* Calculate cost of each equipment
 from file "equipments.csv"
 @param - void
-@result –  void
+@result вЂ“  void
 */
 void all_equipment_cost(){
     int equipments_ids = set_id("../equipments.csv");
@@ -201,7 +197,7 @@ void all_equipment_cost(){
 Function that calculates total cost
 of workers' equipment of a given director
 @param - object of Director class
-@result –  float value - equipment total cost
+@result вЂ“  float value - equipment total cost
 */
 float director_equipment_total_cost(Director d){
     float total_cost = 0;
@@ -238,9 +234,9 @@ float director_equipment_total_cost(Director d){
 int main(){
     string mode;
 
-    /*Рахуємо вартість обладнання працівників та сумісників,
-    які підпорядковані директору з ID=3
-    та виводимо значення в консоль
+    /*ГђГ ГµГіВєГ¬Г® ГўГ Г°ГІВіГ±ГІГј Г®ГЎГ«Г Г¤Г­Г Г­Г­Гї ГЇГ°Г Г¶ВіГўГ­ГЁГЄВіГў ГІГ  Г±ГіГ¬ВіГ±Г­ГЁГЄВіГў,
+    ГїГЄВі ГЇВіГ¤ГЇГ®Г°ГїГ¤ГЄГ®ГўГ Г­Ві Г¤ГЁГ°ГҐГЄГІГ®Г°Гі Г§ ID=3
+    ГІГ  ГўГЁГўГ®Г¤ГЁГ¬Г® Г§Г­Г Г·ГҐГ­Г­Гї Гў ГЄГ®Г­Г±Г®Г«Гј
     */
 
     Director d2;
@@ -249,8 +245,8 @@ int main(){
     cout<<"Total cost of this director's workers' equipment = ";
     cout<<director_equipment_total_cost(d2)<<endl;
 
-    /*Тут запускаються всі вище описані в цьому файлі тести,
-    для запуску будь-якого з них просто приберіть знак коментарю перед ними
+    /*Г’ГіГІ Г§Г ГЇГіГ±ГЄГ ГѕГІГјГ±Гї ГўГ±Ві ГўГЁГ№ГҐ Г®ГЇГЁГ±Г Г­Ві Гў Г¶ГјГ®Г¬Гі ГґГ Г©Г«Ві ГІГҐГ±ГІГЁ,
+    Г¤Г«Гї Г§Г ГЇГіГ±ГЄГі ГЎГіГ¤Гј-ГїГЄГ®ГЈГ® Г§ Г­ГЁГµ ГЇГ°Г®Г±ГІГ® ГЇГ°ГЁГЎГҐГ°ВіГІГј Г§Г­Г ГЄ ГЄГ®Г¬ГҐГ­ГІГ Г°Гѕ ГЇГҐГ°ГҐГ¤ Г­ГЁГ¬ГЁ
     */
 
     //product_test();

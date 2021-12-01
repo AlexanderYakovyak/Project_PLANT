@@ -10,14 +10,6 @@ Profession, abstract class Human, Worker, Director, Side Worker
 #ifndef PLANT_H_
 #define PLANT_H_
 
-#ifdef __cplusplus
-extern "C"{
-#endif
-#include "../PLANT_C/PLANT.h"
-#ifdef __cplusplus
-} // end extern "C"
-#endif
-
 
 using namespace std;
 
